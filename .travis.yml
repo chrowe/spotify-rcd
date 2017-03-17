@@ -1,4 +1,5 @@
 os: osx
+osx_image: xcode8.2
 
 language: bash
 
@@ -6,7 +7,7 @@ script:
   - bash ./install.sh
 
 before_deploy:
-  - bash tar -czvf tweak.tar.gz build/Release/SpotifyRCD.bundle
+  - tar -czvf tweak.tar.gz build/Release/SpotifyRCD.bundle
 
 deploy:
   provider: releases
